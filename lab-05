@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main ()
+{
+
+  int i, j, k;
+  int mat [3][3];
+
+  for (i=0; i<3; i++) {
+    for (j=0; j<3; j++) {
+      printf ("Digite o valor da posicao %d, %d: ", i+1, j+1);
+      scanf ("%d", &mat[i][j]);
+    }
+  }
+
+  for (i=0; i<3; i++) {
+    for (j=0; j<3; j++){
+      printf ("%d", mat[i][j]);
+      printf (" ");
+    }
+    printf ("\n");
+  }
+
+  printf ("Digite um valor k para multiplicar a matriz: ");
+
+  scanf ("%d", &k);
+  printf ("O valor da matriz atualizada e:\n");
+
+  for (i=0; i<3; i++) {
+    for (j=0; j<3; j++) {
+      mat[i][j] *= k;
+      printf ("%d", mat[i][j]);
+      printf (" ");
+    }
+    printf ("\n");
+  }
+  return 0;
+}
